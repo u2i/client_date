@@ -5,8 +5,9 @@ var fullMonthsNames = ["January", "February", "March", "April", "May", "June", "
 
 function fdts(y,m,d,hr,mn,s) {
   gmtDate = new Date(Date.UTC(y,m-1,d,hr,mn,s));
-	text = months[gmtDate.getMonth()];
+  text = months[gmtDate.getMonth()];
   text += ' '+gmtDate.getDate();
+  text += ', '+(gmtDate.getYear() + 1900);
   ampm = 'AM';
   hours = gmtDate.getHours();
   if (hours > 11) { ampm = 'PM'; }
