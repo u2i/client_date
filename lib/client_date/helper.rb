@@ -11,6 +11,16 @@ module ClientDate
       assemble_javascript(date,function)
     end
 
+    def format_date_posted_on(date)
+      return "" if date.nil?
+      assemble_javascript(date,"postedOn")
+    end
+
+    def format_date_posted_at(date)
+      return "" if date.nil?
+      assemble_javascript(date,"postedAt")
+    end
+
     private
 
     def date_params(date)
