@@ -1,2 +1,6 @@
 TIMELOG
 *.gem
+
+# Emacs backup files
+*#
+*~
