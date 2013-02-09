@@ -24,7 +24,8 @@ module ClientDate
     private
 
     def date_params(date)
-      return "" if date.nil?
+      respond_to_all = [:year, :month, :day, :hour, :min, :sec].map{ |met| date.respond_to?(met)}.uniq.size
+      return "" if date.nil? || respond_to_all != 1
       text  = date.year.to_s + ","
       text += date.month.to_s + ","
       text += date.day.to_s + ","
