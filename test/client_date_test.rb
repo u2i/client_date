@@ -43,4 +43,9 @@ class ClientDateTest < Test::Unit::TestCase
     assert_equal "", format_datetime(nil)
     assert_equal "<script>postedAt(2000,1,1,20,15,47);</script>", format_date_posted_at(Time.gm(2000,"jan",1,20,15,47))
   end
+
+  def test_client_strftime_for_time
+    assert_equal "<script>client_strftime(2000,1,1,20,15,23,'%Y-%m-%d');</script>", Time.gm(2000,"jan",1,20,15,23).client_strftime('%Y-%m-%d')
+  end
+
 end

@@ -14,8 +14,11 @@ Gem::Specification.new do |s|
   s.files = ["README", "CHANGELOG", "MIT-LICENSE","Rakefile", "client_date.gemspec",
     "lib/client_date.rb",
     "app/assets/javascripts/client_date.js",
+    "app/assets/javascripts/strftime/strftime.js",
+    "app/assets/javascripts/strftime/strftime-min.js",
     "test/client_date_test.rb","test/test_helper.rb",
     "lib/client_date/helper.rb",
+    "lib/client_date/strftime.rb",
     "lib/client_date/rails/engine.rb"]
   s.test_files = ["test/client_date_test.rb","test/test_helper.rb"]
   s.rdoc_options = ["--main", "README"]
