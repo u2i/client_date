@@ -13,12 +13,12 @@ module ClientDate
 
     def format_date_posted_on(date)
       return "" if date.nil? || !responds_to_all(date)
-      assemble_javascript(date,"postedOn")
+      date.client_strftime("%b %d, %Y")
     end
 
     def format_date_posted_at(date)
       return "" if date.nil? || !responds_to_all(date)
-      assemble_javascript(date,"postedAt")
+      date.client_strftime("%I:%M %P on %B %d, %Y")
     end
 
     private

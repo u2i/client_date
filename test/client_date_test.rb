@@ -35,7 +35,7 @@ class ClientDateTest < Test::Unit::TestCase
 
   def test_format_date_posted_on
     assert_equal "", format_datetime(nil)
-    assert_equal "<script>postedOn(2000,1,1,20,15,47);</script>", format_date_posted_on(Time.gm(2000,"jan",1,20,15,47))
+    assert_equal "<script>client_strftime(2000,1,1,20,15,47,'%b %d, %Y');</script>", format_date_posted_on(Time.gm(2000,"jan",1,20,15,47))
     assert_equal "", format_date_posted_on(Date.today)
   end
 
@@ -45,7 +45,7 @@ class ClientDateTest < Test::Unit::TestCase
 
   def test_format_date_posted_at
     assert_equal "", format_datetime(nil)
-    assert_equal "<script>postedAt(2000,1,1,20,15,47);</script>", format_date_posted_at(Time.gm(2000,"jan",1,20,15,47))
+    assert_equal "<script>client_strftime(2000,1,1,20,15,47,'%I:%M %P on %B %d, %Y');</script>", format_date_posted_at(Time.gm(2000,"jan",1,20,15,47))
     assert_equal "", format_date_posted_at(Date.today)
   end
 
