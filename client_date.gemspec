@@ -3,8 +3,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name = "client_date"
-  s.version = "0.2"
-  s.date = "2013-02-10"
+  s.version = "0.3"
+  s.date = "2013-02-09"
   s.summary = "Uses client-side Javascript to format a datetime instead of the Ruby on Rails server"
   s.email = "piotr.bzymek@u2i.com"
   s.homepage = "http://github.com/u2illc/client_date"
