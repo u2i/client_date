@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    client_date (0.3)
+    client_date (0.4)
       activesupport
 
 GEM
