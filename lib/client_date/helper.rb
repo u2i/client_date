@@ -2,13 +2,13 @@ module ClientDate
   module Helper
     def format_date(date)
       return "" if date.nil? || !responds_to_all(date)
-      assemble_javascript(date,"fd")
+      date.client_strftime("%b %d")
     end
 
     def format_datetime(date,seconds=false)
       return "" if date.nil? || !responds_to_all(date)
-      function = seconds ? "fdts" : "fdt"
-      assemble_javascript(date,function)
+      format = seconds ? '%b %d, %Y %I:%M:%S %p' : '%b %d %I:%M %p'
+      date.client_strftime(format)
     end
 
     def format_date_posted_on(date)
