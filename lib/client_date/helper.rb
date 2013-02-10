@@ -24,7 +24,7 @@ module ClientDate
     private
 
     def responds_to_all date
-      responds_to = [:year, :month, :day, :hour, :min, :sec].map{ |met| date.respond_to?(met)}.uniq
+      responds_to = [:year, :month, :day, :hour, :min, :sec, :utc].map{ |met| date.respond_to?(met)}.uniq
       responds_to.size == 1 && responds_to.first
     end
 

@@ -3,7 +3,7 @@ require 'active_support'
 module ClientDate
   module Strftime
     def client_strftime format
-      "<script>client_strftime(#{date_params(self)},'#{format}');</script>"
+      "<script>client_strftime(#{date_params(self.utc)},'#{format}');</script>"
     end
 
     private
